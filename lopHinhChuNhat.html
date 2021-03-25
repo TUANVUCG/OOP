@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle{
+        lenght;
+        height;
+        constructor(lenght,height) {
+            this.lenght = lenght;
+            this.height = height;
+        }
+        getAcreage(){
+            return (this.height*this.lenght);
+        }
+        getPerimeter(){
+            return (this.height+this.lenght)*2;
+        }
+        setLenght(lenght){
+            this.lenght = lenght;
+        }
+        setHeight(height){
+            this.height = height;
+        }
+
+    }
+    let rectangle = new Rectangle(5,4);
+    let acreage = rectangle.getAcreage()
+    let perimeter = rectangle.getPerimeter()
+    alert("Acreage is : " + acreage + " and " + "Perimeter is : " + perimeter)
+    rectangle.setLenght(23);
+    rectangle.setHeight(12);
+    acreage = rectangle.getAcreage();
+    perimeter = rectangle.getPerimeter();
+    alert("Acreage is : " + acreage + " and " + "Perimeter is : " + perimeter)
+</script>
+</body>
+</html>
