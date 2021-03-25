@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<button id="eat" onclick="eat()">Eat Apple</button>
+<script>
+
+    class Apple {
+        weight;
+
+        constructor(w) {
+            this.weight = w;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        decrease() {
+            this.weight--;
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == "man") {
+                return true;
+            }
+            return false;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(apple) {
+            var isEmpty = apple.isEmpty();
+            return isEmpty
+        }
+
+        eat(apple) {
+            apple.weight--;
+            this.weight++;
+            if(apple.weight==0){
+                alert("Done");
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+    var apple = new Apple(10);
+    var taoMy = new Apple(20);
+    var taoTau = new Apple(5);
+    var human = new Human("NTV", "man", 60);
+    var tuanvu = new Human("HEHE","man",58);
+    function eat() {
+        human.eat(apple);
+        document.getElementById("result").innerHTML = apple.weight;
+
+    }
+</script>
+</body>
+</html>

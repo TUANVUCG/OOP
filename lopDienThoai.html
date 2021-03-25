@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        battery;
+        draft=[];
+        display;
+        sent=[];
+        status;
+        name;
+        message;
+        inbox=[];
+        constructor(battery,name) {
+            this.battery = battery;
+            this.draft = [];
+            this.display = [];
+            this.sent = [];
+            this.status = status;
+            this.name = name;
+            this.inbox = [];
+        }
+        getName(){
+            return this.name;
+        }
+        getBattery(){
+            return this.battery;
+        }
+        setName(name){
+            this.name = name;
+        }
+        turnOn(){
+            this.status = true;
+            alert("ON");
+        }
+        turnOff(){
+            this.status = false;
+            alert("OFF");
+        }
+        charge(){
+            this.battery ++;
+        }
+        setMessage(message){
+            this.message = message;
+        }
+        getMessage(){
+            this.message = prompt("Soan tin nhan")
+        }
+        sendMessage(message,mobile){
+            this.battery --;
+            this.sent.push(this.message);
+            mobile.display.push(message);
+        }
+        save(){
+            this.battery --;
+            this.draft.push(this.message);
+        }
+        open(){
+            return this.display;
+        }
+    }
+    var nokia = new Mobile(100,"NOKIA")
+    var iphone = new Mobile(100,"IPHONE")
+    var pinnokia = nokia.getBattery();
+    alert("Battery Nokia is: " + pinnokia);
+    var message = nokia.sendMessage("Message from Nokia")
+    document.write(nokia.sendMessage("Message from nokia"),iphone)
+</script>
+</body>
+</html>
