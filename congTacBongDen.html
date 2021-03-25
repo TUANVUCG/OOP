@@ -15,12 +15,12 @@
         }
         switchOn(){
             this.status = true;
-            alert("Công tắc tắt")
+            alert("Công tắc bật")
             this.lamp.turnOn();
         }
         switchOff(){
             this.status = false;
-            alert("Công tắc bật")
+            alert("Công tắc tắt")
             this.lamp.turnOff();
         }
     }
@@ -48,6 +48,12 @@
     switch1.switchOn();
     switch1.lamp = denTau;
     switch1.switchOff();
+    function tunrOn() {
+        for(var i = 0; i <10; i++){
+            switch1.switchOn()
+        }
+    }
+    tunrOn()
 
 </script>
 </body>
