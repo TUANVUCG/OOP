@@ -26,7 +26,7 @@
         }
         drawCar() {
             let image = new Image(this.width, this.height);
-            image.src = "oto.jpg";
+            image.src = "hihi.jpg";
             image.onload = () => {
                 ctx.drawImage(image, this.x, this.y);
             }
@@ -65,10 +65,10 @@
     }
     var car = new Car(50, 100, 2, 2, 60);
     car.drawCar();
-    // window.addEventListener("keydown", move);
-    setInterval(function (){
-        car.moveDown()
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        car.drawCar();
-    }, 100);
+    window.addEventListener("keydown", move);
+    // setInterval(function (){
+    //     car.moveDown()
+    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //     car.drawCar();
+    // }, 100);
 </script>
